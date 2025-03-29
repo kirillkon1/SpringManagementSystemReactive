@@ -1,0 +1,26 @@
+server:
+  port: ${SERVER_PORT:6002}
+
+spring:
+  application:
+    name: task-service-reactive
+    version: 1.0.0
+  main:
+    web-application-type: reactive
+  r2dbc:
+    url: r2dbc:postgresql://${APP_POSTGRESQL_HOST:127.0.0.1}:${APP_POSTGRESQL_PORT:5432}/${APP_POSTGRESQL_NAME:tasks_db}
+    username: ${APP_POSTGRESQL_USER:postgres}
+    password: ${APP_POSTGRESQL_PASSWORD:postgres}
+  flyway:
+    url: jdbc:postgresql://${APP_POSTGRESQL_HOST:127.0.0.1}:${APP_POSTGRESQL_PORT:5432}/${APP_POSTGRESQL_NAME:tasks_db}
+    user: ${APP_POSTGRESQL_USER:postgres}
+    password: ${APP_POSTGRESQL_PASSWORD:postgres}
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+
+logging:
+  config: classpath:${logback:logback-spring.xml}
+
+

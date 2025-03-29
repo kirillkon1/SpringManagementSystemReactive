@@ -1,0 +1,29 @@
+global:
+  scrape_interval: 1s
+
+scrape_configs:
+  - job_name: 'user-service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['sr-user-service:8001']
+
+  - job_name: 'task-service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['sr-task-service:8002']
+
+  - job_name: 'project-service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['sr-project-service:8003']
+
+  - job_name: 'analytics-service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['sr-analytics-service:8004']
+
+  - job_name: 'sr-api-gateway'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['sr-api-gateway:8050']
+
