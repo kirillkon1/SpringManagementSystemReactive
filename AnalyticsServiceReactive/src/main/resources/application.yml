@@ -24,3 +24,17 @@ logging:
   config: classpath:${logback:logback-spring.xml}
 
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    prometheus:
+      access: unrestricted
+
+  prometheus:
+    metrics:
+      export:
+        enabled: true

@@ -8,5 +8,9 @@ echo ""
 
 bash ./build_all.sh
 
+
+echo ">>>>>>STARTING DOCKER COMPOSE<<<<<<"
+echo ""
+
 cd ./deploy
 docker-compose up --build -d

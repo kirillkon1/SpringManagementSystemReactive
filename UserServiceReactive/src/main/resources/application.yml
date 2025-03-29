@@ -26,3 +26,18 @@ logging:
 jwt:
   secret: Rf+963vdkSxgAP9MJVB+BIFLJoVn7sIa/mLUTtVgTaZwpVQWAOpFCsU5f9USMILMquDZFiPH5Q32pqp/YOwcky8mODXh0wPBp6zE1NFGI2vkH3W+6S7eBHn9j6xVeg1zo8WJ8m3nDdI6OmskpM0GfLpeDXkUoeUal+zN4YXcFJwD
   expirationMs: 86400000 # 1 ???? ? ??
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    prometheus:
+      access: unrestricted
+
+  prometheus:
+    metrics:
+      export:
+        enabled: true
