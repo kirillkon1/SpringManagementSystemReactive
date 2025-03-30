@@ -5,11 +5,10 @@ import org.springframework.data.relational.core.mapping.Column
 import org.springframework.data.relational.core.mapping.Table
 import java.time.LocalDateTime
 
-@Table(name = "task_analytics")
+@Table(name = "tasks_analytics")
 data class TaskEvent(
     @Id
     val id: Long? = null,
-    val taskId: Long,
     val title: String,
     val description: String,
     val dueDate: LocalDateTime,
