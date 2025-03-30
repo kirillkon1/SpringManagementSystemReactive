@@ -1,6 +1,4 @@
 services:
-
-
   sr-api-gateway:
     container_name: sr-api-gateway
     build: ../../ApiGateway
