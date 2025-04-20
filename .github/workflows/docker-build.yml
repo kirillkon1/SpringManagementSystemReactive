@@ -1,0 +1,32 @@
+name: Docker Compose Build
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  build-images:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Install docker-compose
+        run: |
+          curl -SL https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-`uname -s`-`uname -m` \
+            -o /usr/local/bin/docker-compose
+          chmod +x /usr/local/bin/docker-compose
+
+      - name: Prepare .env for CI
+        run: |
+          cp scripts/deploy/.env.example scripts/deploy/.env
+
+      - name: Build Docker Compose images
+        working-directory: scripts/deploy
+        run: docker-compose build --parallel
