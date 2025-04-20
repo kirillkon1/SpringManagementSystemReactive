@@ -21,6 +21,11 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
+      - name: Install Docker Compose plugin
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker-compose-plugin
+
       - name: Build Docker Compose images
         working-directory: scripts/deploy
-        run: docker-compose build --parallel
+        run: docker compose build --parallel
