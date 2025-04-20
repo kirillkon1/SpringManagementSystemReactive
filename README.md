@@ -13,7 +13,7 @@
 ## Шаг 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/yourusername/sr-microservices.git
+git clone https://github.com/kirillkon1/SpringManagementSystemReactive.git
 ```
 
 ### Перейти в директорию scripts/deploy
