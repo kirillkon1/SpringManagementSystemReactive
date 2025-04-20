@@ -4,10 +4,10 @@ import io.jsonwebtoken.JwtException
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
-import ru.itmo.usermanagementservice.dto.RegisterRequest
-import ru.itmo.usermanagementservice.dto.UserDTO
-import ru.itmo.usermanagementservice.dto.mapToDto
+import ru.itmo.userservicereactive.dto.RegisterRequest
+import ru.itmo.userservicereactive.dto.UserDTO
 import ru.itmo.userservicereactive.dto.VerifyTokenDto
+import ru.itmo.userservicereactive.dto.mapToDto
 import ru.itmo.userservicereactive.model.User
 import ru.itmo.userservicereactive.repository.UserRepository
 import ru.itmo.userservicereactive.security.JwtTokenProvider

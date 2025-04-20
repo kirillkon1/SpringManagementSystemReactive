@@ -1,8 +1,8 @@
 package ru.itmo.userservicereactive.service
 
 import reactor.core.publisher.Mono
-import ru.itmo.usermanagementservice.dto.RegisterRequest
-import ru.itmo.usermanagementservice.dto.UserDTO
+import ru.itmo.userservicereactive.dto.RegisterRequest
+import ru.itmo.userservicereactive.dto.UserDTO
 import ru.itmo.userservicereactive.dto.VerifyTokenDto
 
 interface AuthService {

@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import reactor.core.publisher.Mono
-import ru.itmo.usermanagementservice.dto.AuthResponse
-import ru.itmo.usermanagementservice.dto.LoginRequest
-import ru.itmo.usermanagementservice.dto.RegisterRequest
-import ru.itmo.usermanagementservice.dto.UserDTO
+import ru.itmo.userservicereactive.dto.AuthResponse
+import ru.itmo.userservicereactive.dto.LoginRequest
+import ru.itmo.userservicereactive.dto.RegisterRequest
+import ru.itmo.userservicereactive.dto.UserDTO
 import ru.itmo.userservicereactive.dto.VerifyTokenDto
 import ru.itmo.userservicereactive.service.AuthService
 

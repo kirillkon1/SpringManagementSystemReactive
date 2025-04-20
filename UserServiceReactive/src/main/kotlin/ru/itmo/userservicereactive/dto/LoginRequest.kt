@@ -1,4 +1,4 @@
-package ru.itmo.usermanagementservice.dto
+package ru.itmo.userservicereactive.dto
 
 import jakarta.validation.constraints.NotBlank
 

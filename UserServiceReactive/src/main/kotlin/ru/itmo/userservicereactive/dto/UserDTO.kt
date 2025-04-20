@@ -1,11 +1,11 @@
-package ru.itmo.usermanagementservice.dto
+package ru.itmo.userservicereactive.dto
 
 import ru.itmo.userservicereactive.model.User
 import java.io.Serializable
 import java.time.LocalDateTime
 
 /**
- * DTO for {@link ru.itmo.usermanagementservice.model.User}
+ * DTO for ru.itmo.usermanagementservice.model.User
  */
 data class UserDTO(
     val id: Long,
