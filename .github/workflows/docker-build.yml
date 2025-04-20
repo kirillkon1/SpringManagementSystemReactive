@@ -19,12 +19,13 @@ jobs:
 
       - name: Install docker-compose
         run: |
-          # Скачиваем последнюю стабильную версию docker-compose
           curl -SL https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-`uname -s`-`uname -m` \
             -o /usr/local/bin/docker-compose
           chmod +x /usr/local/bin/docker-compose
-          # Проверяем версию
-          docker-compose version
+
+      - name: Prepare .env for CI
+        run: |
+          cp scripts/deploy/.env.example scripts/deploy/.env
 
       - name: Build Docker Compose images
         working-directory: scripts/deploy
